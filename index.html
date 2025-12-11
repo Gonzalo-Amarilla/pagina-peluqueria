@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudio Belle - Peluquería boutique en el corazón de la ciudad. Cortes modernos, color personalizado, tratamientos capilares premium. Reservá tu cita online.">
+    <title>Estudio Belle | Peluquería Boutique Premium</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header id="site-header" role="banner">
+      <div class="nav-container">
+        <a href="#home" class="logo" aria-label="Estudio Belle - Ir al inicio">
+          <i class="fas fa-scissors"></i> Estudio Belle
+        </a>
+
+        <nav role="navigation" aria-label="Menú principal">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#precios">Paquetes</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#reserva" class="nav-cta" id="cta-reservar">Reservar</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-content container">
+          <h1 id="hero-title">Redefiní tu estilo en Estudio Belle</h1>
+          <p class="hero-subtitle">
+            Cortes modernos, coloración personalizada y tratamientos de lujo para cuidar tu cabello. Experiencia
+            boutique, atención personalizada.
+          </p>
+          <div>
+            <button class="btn btn-primary" id="btn-reservar-hero">Reservar ahora</button>
+            <a href="#servicios" class="btn btn-secondary">Ver servicios</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section class="services" id="servicios" aria-labelledby="servicios-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="servicios-title">Nuestros servicios</h2>
+            <p>Tratamientos exclusivos y servicios a medida. Elegí la experiencia que más te guste.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card" data-animate>
+              <div class="service-icon"><i class="fas fa-cut"></i></div>
+              <h3>Cortes y Styling</h3>
+              <p>
+                Cortes modernos, asesoría de estilo y peinados para eventos. Adaptamos el corte a tu rostro y estilo de
+                vida.
+              </p>
+              <a class="btn-link" href="#precios">Ver precios <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card" data-animate>
+              <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+              <h3>Color y Mechas</h3>
+              <p>
+                Coloración personalizada, balayage y mechas con técnicas de vanguardia y productos de máxima calidad.
+              </p>
+              <a class="btn-link" href="#galeria">Ver portfolio <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <article class="service-card" data-animate>
+              <div class="service-icon"><i class="fas fa-spa"></i></div>
+              <h3>Tratamientos Capilares</h3>
+              <p>Nutrición, keratina y terapias de reparación profunda para recuperar brillo y resistencia.</p>
+              <a class="btn-link" href="#reserva">Reservar tratamiento <i class="fas fa-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRECIOS / PAQUETES -->
+      <section class="pricing" id="precios" aria-labelledby="precios-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="precios-title">Paquetes destacados</h2>
+            <p>Paquetes pensados para distintas necesidades: rápidos y accesibles, hasta experiencias premium.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h3>Básico</h3>
+              <div class="price">$2.500</div>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Corte básico</li>
+                <li><i class="fas fa-check"></i> Peinado</li>
+                <li><i class="fas fa-check"></i> Asesoría rápida</li>
+              </ul>
+              <button class="btn btn-primary" data-open-modal="reserva">Reservar</button>
+            </div>
+
+            <div class="pricing-card featured">
+              <h3>Premium</h3>
+              <div class="price">$5.800</div>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Corte + color</li>
+                <li><i class="fas fa-check"></i> Tratamiento nutritivo</li>
+                <li><i class="fas fa-check"></i> Estilo final</li>
+              </ul>
+              <button class="btn btn-primary" data-open-modal="reserva">Reservar</button>
+            </div>
+
+            <div class="pricing-card">
+              <h3>Evento</h3>
+              <div class="price">$4.200</div>
+              <ul class="pricing-features">
+                <li><i class="fas fa-check"></i> Peinado para evento</li>
+                <li><i class="fas fa-check"></i> Prueba previa</li>
+                <li><i class="fas fa-check"></i> Maquillaje (opcional)</li>
+              </ul>
+              <button class="btn btn-primary" data-open-modal="reserva">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section class="gallery" id="galeria" aria-labelledby="galeria-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="galeria-title">Galería</h2>
+            <p>Algunos trabajos realizados en el estudio. Hacé click para ampliar las imágenes.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" aria-label="Ver imagen 1"></div>
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800" aria-label="Ver imagen 2"></div>
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800" aria-label="Ver imagen 3"></div>
+            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800" aria-label="Ver imagen 4"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIGHTBOX -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen"><i class="fas fa-times"></i></div>
+        <img src="" alt="Imagen ampliada" class="lightbox-content" id="lightbox-img">
+      </div>
+
+      <!-- EQUIPO -->
+      <section class="team" id="equipo" aria-labelledby="equipo-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="equipo-title">Nuestro equipo</h2>
+            <p>Profesionales especializados y apasionados por el cabello y la estética.</p>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-member" data-animate>
+              <div class="team-photo"><i class="fas fa-user"></i></div>
+              <h3>María López</h3>
+              <div class="team-role">Directora técnica</div>
+              <p class="team-bio">
+                Especialista en coloración y cortes contemporáneos con más de 10 años de experiencia.
+              </p>
+            </div>
+
+            <div class="team-member" data-animate>
+              <div class="team-photo"><i class="fas fa-user"></i></div>
+              <h3>Lucía Fernández</h3>
+              <div class="team-role">Estilista senior</div>
+              <p class="team-bio">Peinados para eventos y asesoría personalizada según morfología facial.</p>
+            </div>
+
+            <div class="team-member" data-animate>
+              <div class="team-photo"><i class="fas fa-user"></i></div>
+              <h3>Carolina Díaz</h3>
+              <div class="team-role">Técnica en tratamientos</div>
+              <p class="team-bio">Tratamientos reconstructivos y terapias capilares con protocolos avanzados.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section class="testimonials" id="testimonios" aria-labelledby="testimonios-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="testimonios-title">Testimonios</h2>
+            <p>Lo que dicen quienes ya vivieron la experiencia Estudio Belle.</p>
+          </div>
+
+          <div class="testimonials-slider">
+            <div class="testimonial-item active">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Excelente atención, me encantó el corte y el color. Volveré sin dudas."</p>
+              <div class="testimonial-author">— Sofía R.</div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Ambiente cálido, productos profesionales y un resultado impecable."</p>
+              <div class="testimonial-author">— Valentina M.</div>
+            </div>
+
+            <div class="testimonial-item">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Muy recomendable, el equipo supo entender mi estilo y me asesoraron genial."
+              </p>
+              <div class="testimonial-author">— Martina G.</div>
+            </div>
+
+            <div class="slider-controls">
+              <div class="slider-dot active" data-index="0" role="tab" tabindex="0" aria-selected="true"></div>
+              <div class="slider-dot" data-index="1" role="tab" tabindex="0" aria-selected="false"></div>
+              <div class="slider-dot" data-index="2" role="tab" tabindex="0" aria-selected="false"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIO DE RESERVA -->
+      <section class="booking" id="reserva" aria-labelledby="reserva-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="reserva-title">Reservá tu turno</h2>
+            <p>Completá el formulario y te confirmamos por WhatsApp o email.</p>
+          </div>
+
+          <form class="booking-form" id="booking-form" novalidate>
+            <div class="form-group">
+              <label for="name">Nombre completo *</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre">
+              <div class="form-error">Por favor ingresá tu nombre.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono / WhatsApp *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+54 9 11 1234 5678">
+              <div class="form-error">Ingresá un teléfono válido.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@mail.com">
+              <div class="form-error">Ingresá un email válido.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Servicio</label>
+              <select id="service" name="service">
+                <option value="Corte">Corte</option>
+                <option value="Color">Color / Mechas</option>
+                <option value="Tratamiento">Tratamiento</option>
+                <option value="Evento">Peinado para evento</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Fecha propuesta</label>
+              <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Comentarios</label>
+              <textarea
+                id="notes"
+                name="notes"
+                placeholder="Contanos algo sobre tu estilo o lo que te gustaría hacer..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar reserva</button>
+
+            <div class="form-success" id="form-success">
+              ¡Gracias! Tu solicitud fue enviada correctamente. Te contactamos en breve.
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- CONTACTO Y MAPA -->
+      <section class="contact" id="contacto" aria-labelledby="contacto-title">
+        <div class="container">
+          <div class="section-title">
+            <h2 id="contacto-title">Contacto</h2>
+            <p>Estamos en el centro. Vení a conocernos o contactanos por teléfono / redes.</p>
+          </div>
+
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h3>Estudio Belle</h3>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-details">
+                  <h4>Dirección</h4>
+                  <p>Av. Principal 123, Ciudad</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div class="contact-details">
+                  <h4>Teléfono</h4>
+                  <p>+54 9 11 1234 5678</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                <div class="contact-details">
+                  <h4>Horario</h4>
+                  <p>Mar–Sáb 9:00–19:00</p>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13136.697846634952!2d-58.4016983!3d-34.6037181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e10!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2s!4v1234567890" allowfullscreen="" loading="lazy" aria-label="Mapa de ubicación"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+      <div class="footer-content container">
+        <div class="footer-section">
+          <h3>Estudio Belle</h3>
+          <p>Un espacio boutique de peluquería, donde el detalle y la calidad marcan la diferencia.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Enlaces</h3>
+          <ul class="footer-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#precios">Paquetes</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#reserva">Reservas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contacto rápido</h3>
+          <p>+54 9 11 1234 5678<br>hola@estudiobelle.com</p>
+          <div class="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Tu email">
+            <button id="newsletter-btn" aria-label="Suscribirme">Suscribirme</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© <span id="year"></span> Estudio Belle — Todos los derechos reservados.</div>
+    </footer>
+
+    <!-- MODAL DE RESERVA -->
+    <div class="modal" id="modal-reserva" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-content">
+        <button class="lightbox-close" id="modal-close" aria-label="Cerrar modal"><i class="fas fa-times"></i></button>
+        <h3>Reservá tu turno</h3>
+        <p>Completá la información y nuestro equipo te confirmará disponibilidad.</p>
+
+        <form id="modal-booking-form" class="booking-form" novalidate>
+          <div class="form-group">
+            <label for="m-name">Nombre *</label>
+            <input type="text" id="m-name" required>
+            <div class="form-error">Ingresá tu nombre.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="m-phone">Teléfono *</label>
+            <input type="tel" id="m-phone" required>
+            <div class="form-error">Ingresá un teléfono válido.</div>
+          </div>
+
+          <div class="form-group">
+            <label for="m-service">Servicio</label>
+            <select id="m-service">
+              <option>Corte</option>
+              <option>Color</option>
+              <option>Tratamiento</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+
+          <div class="form-success" id="modal-success">Gracias — te contactamos en breve.</div>
+        </form>
+      </div>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/funciones.js">
+    </script>
+</body>
+</html>
