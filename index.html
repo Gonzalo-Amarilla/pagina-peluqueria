@@ -153,10 +153,12 @@
           </div>
 
           <div class="gallery-grid">
-            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800" aria-label="Ver imagen 1"></div>
-            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800" aria-label="Ver imagen 2"></div>
-            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=800" aria-label="Ver imagen 3"></div>
-            <div class="gallery-item" data-src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800" aria-label="Ver imagen 4"></div>
+            <div class="gallery-item" data-src="img/corte1.png" aria-label="Ver imagen 2"></div>
+            <div class="gallery-item" data-src="img/corte2.png" aria-label="Ver imagen 2"></div>
+            <div class="gallery-item" data-src="img/corte3.png" aria-label="Ver imagen 3"></div>
+            <div class="gallery-item" data-src="img/corte4.png" aria-label="Ver imagen 4"></div>
+            <div class="gallery-item" data-src="img/corte5.png" aria-label="Ver imagen 5"></div>
+            <div class="gallery-item" data-src="img/corte6.png" aria-label="Ver imagen 6"></div>
           </div>
         </div>
       </section>
@@ -241,65 +243,195 @@
       </section>
 
       <!-- FORMULARIO DE RESERVA -->
-      <section class="booking" id="reserva" aria-labelledby="reserva-title">
-        <div class="container">
-          <div class="section-title">
-            <h2 id="reserva-title">Reservá tu turno</h2>
-            <p>Completá el formulario y te confirmamos por WhatsApp o email.</p>
+<section class="booking" id="reserva" aria-labelledby="reserva-title">
+  <div class="container">
+    <div class="section-title">
+      <h2 id="reserva-title">Reservá tu turno</h2>
+      <p>Completá el formulario y te confirmamos por WhatsApp o email en menos de 2 horas.</p>
+    </div>
+
+    <div class="booking-wrapper">
+      <!-- INFO DESTACADA -->
+      <div class="booking-info">
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Horarios flexibles</h3>
+          <p>Mar–Sáb 9:00–19:00. Turnos cada 30 minutos para tu comodidad.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Confirmación rápida</h3>
+          <p>Respuesta garantizada en menos de 2 horas por WhatsApp o email.</p>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Primera visita 15% OFF</h3>
+          <p>Beneficio exclusivo para nuevos clientes en todos los servicios.</p>
+        </div>
+
+        <div class="booking-features">
+          <h4>¿Qué incluye tu reserva?</h4>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Asesoría personalizada sin cargo</li>
+            <li><i class="fas fa-check-circle"></i> Productos premium importados</li>
+            <li><i class="fas fa-check-circle"></i> Ambiente boutique exclusivo</li>
+            <li><i class="fas fa-check-circle"></i> Café de cortesía</li>
+          </ul>
+        </div>
+
+        <div class="booking-emergency">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <strong>¿Necesitás turno urgente?</strong>
+            <p>Contactanos por WhatsApp: <a href="tel:+5491169707786">+54 9 11 6970-7786</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARIO -->
+      <div class="booking-form-container">
+        <form class="booking-form-modern" id="booking-form" novalidate>
+          <div class="form-header">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Datos de tu reserva</h3>
+            <p>Todos los campos marcados con * son obligatorios</p>
           </div>
 
-          <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-row">
             <div class="form-group">
-              <label for="name">Nombre completo *</label>
-              <input type="text" id="name" name="name" required placeholder="Tu nombre">
-              <div class="form-error">Por favor ingresá tu nombre.</div>
+              <label for="name">
+                <i class="fas fa-user"></i>
+                Nombre completo *
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                placeholder="Ej: Gonzalo Amarilla"
+                autocomplete="name"
+              >
+              <div class="form-error">
+                <i class="fas fa-exclamation-circle"></i>
+                Por favor ingresá tu nombre completo.
+              </div>
             </div>
 
             <div class="form-group">
-              <label for="phone">Teléfono / WhatsApp *</label>
-              <input type="tel" id="phone" name="phone" required placeholder="+54 9 11 1234 5678">
-              <div class="form-error">Ingresá un teléfono válido.</div>
+              <label for="phone">
+                <i class="fas fa-mobile-alt"></i>
+                Teléfono *
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                required 
+                placeholder="Ej: +54 9 11 6970-7786"
+                autocomplete="tel"
+              >
+              <div class="form-error">
+                <i class="fas fa-exclamation-circle"></i>
+                Ingresá un número de teléfono válido.
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="tu@mail.com">
-              <div class="form-error">Ingresá un email válido.</div>
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Email *
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="Ej: gonzaloamarilla158@gmail.com"
+              autocomplete="email"
+            >
+            <div class="form-error">
+              <i class="fas fa-exclamation-circle"></i>
+              Ingresá un email válido.
             </div>
+          </div>
 
+          <div class="form-row">
             <div class="form-group">
-              <label for="service">Servicio</label>
+              <label for="service">
+                <i class="fas fa-cut"></i>
+                Servicio deseado
+              </label>
               <select id="service" name="service">
-                <option value="Corte">Corte</option>
-                <option value="Color">Color / Mechas</option>
-                <option value="Tratamiento">Tratamiento</option>
-                <option value="Evento">Peinado para evento</option>
+                <option value="">Seleccioná </option>
+                <option value="Corte">✂️ Corte de cabello</option>
+                <option value="Color">🎨 Color / Mechas / Balayage</option>
+                <option value="Tratamiento">💆‍♀️ Tratamiento capilar</option>
+                <option value="Evento">💃 Peinado para evento</option>
+                <option value="Completo">✨ Cambio de look completo</option>
+                <option value="Consulta">💬 Consulta / Asesoría</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="date">Fecha propuesta</label>
+              <label for="date">
+                <i class="fas fa-calendar-alt"></i>
+                Fecha preferida
+              </label>
               <input type="date" id="date" name="date">
+              <small class="form-hint">Horarios disponibles: Mar–Sáb 9:00–19:00</small>
             </div>
+          </div>
 
-            <div class="form-group">
-              <label for="notes">Comentarios</label>
-              <textarea
-                id="notes"
-                name="notes"
-                placeholder="Contanos algo sobre tu estilo o lo que te gustaría hacer..."
-              ></textarea>
-            </div>
+          <div class="form-group">
+            <label for="notes">
+              <i class="fas fa-comment-dots"></i>
+              Comentarios o preferencias
+            </label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="4"
+              placeholder="Contanos qué te gustaría lograr, referencias de estilos, largo deseado, colores que te interesan, o cualquier detalle que nos ayude a preparar mejor tu visita..."
+            ></textarea>
+            <small class="form-hint">Opcional: ayudanos a conocer tu estilo</small>
+          </div>
 
-            <button type="submit" class="btn btn-primary">Enviar reserva</button>
+          <div class="form-checkbox">
+            <input type="checkbox" id="promo" name="promo">
+            <label for="promo">
+              Quiero recibir promociones exclusivas y novedades de Estudio Belle
+            </label>
+          </div>
 
-            <div class="form-success" id="form-success">
-              ¡Gracias! Tu solicitud fue enviada correctamente. Te contactamos en breve.
-            </div>
-          </form>
-        </div>
-      </section>
+          <button type="submit" class="btn-submit">
+            <i class="fas fa-paper-plane"></i>
+            Enviar solicitud de reserva
+          </button>
 
+          <div class="form-footer">
+            <i class="fas fa-lock"></i>
+            Tus datos están protegidos y no serán compartidos con terceros.
+          </div>
+
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i>
+            <strong>¡Reserva enviada exitosamente!</strong>
+            <p>Te contactaremos en breve para confirmar tu turno.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
       <!-- CONTACTO Y MAPA -->
       <section class="contact" id="contacto" aria-labelledby="contacto-title">
         <div class="container">
